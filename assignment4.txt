@@ -1,0 +1,110 @@
+1. What exactly is []?
+ANS An empty list.
+
+2. In a list of values stored in a variable called spam, how would you assign the value 'hello'; as the third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+ANS 
+ IN spam=[2,4,6,8,10]
+    spam[2]='hello'
+    spam
+ OUT[2, 4, 'hello', 8, 10]
+
+Lets pretend the spam includes the list['a','b','c','d'] for the next three queries.
+
+3.What is the value of spam[int(int(&#39;3&#39; * 2) / 11)]?
+ANS 
+spam=[2,4,6,8,10,['a','b','c','d']]
+spam[int(int('3'*2)/11)] is 8, because '3'*2 is '33', int('33') is 33, 33/11 is 3, spam[3] is 8
+
+4.What is the value of spam[-1]?
+ANS ['a', 'b', 'c', 'd'] RETURNS THE LAST VALUE IN THE LIST.
+
+5.What is the value of spam[:2]?
+ANS [2,4]. it returns values from the indexes in the range(0,2) in the list.
+
+Lets pretend bacon has the list [3.14,'cat',11,'cat', True] for the next three questions.
+
+6. What is the value of bacon.index('cat')?
+ANS  bacon.index('cat') returns the value 1, because even though list is having two same values it will by default consider the first one end ends the search once it got hit. so we got the first possible index of the value 'cat', here it is 1.
+
+7. How does bacon.append(99) change the look of the list value in bacon?
+ANS bacon.append(99) will add the value at the very end of the list. hence we got [3.14, 'cat', 11, 'cat', True, 99] after appending.
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+ANS [3.14, 11, 'cat', True, 99], it will remove the value at the very first index in the list, while searching.
+
+9.What are the list concatenation and list replication operators?
+ANS Concatination and Replication operations are supported by sequence data types like List(mutable), tuple and strings(immutable), not supported by sequence datatype range, non sequence data types sets and dictionaries.
+list concatenation is done by + operator,adds at the end of the first list, concatenating two lists will result in a new list object. 
+Replication or Repetition operator * will not make multiple copies but are referenced multiple times, it create references and results in a new list object.
+
+10.What is difference between the list methods append() and insert()?
+ANS append() method will just add item at the end of the list.
+insert(position,new entry) method will create a new entry at required position
+
+11.What are the two methods for removing items from a list?
+ANS remove() method will remove the very first given element matching from the list.It wont return any value.
+syntax: list.remove(element), it doesnt return any value, but it taves the value in an argument. hence the value has to be passed with the correct data type.
+pop() method removes an element from the list based on the index  given.
+syntax: list.pop(index), the index argument is optional if not passed the default value is considered as -1 and the last element from the list is removed. it will return the element removed.
+
+12.Describe how list values and string values are identical.
+ANS list is a sequential collection of data values , where each value is identified by an index. string is a sequential collection of charectors.lists are similar to strings when both are the ordered collection of charectors.
+example:
+a="sireesha"
+for i in a:
+    print(i)
+output s
+i
+r
+e
+e
+s
+h
+a
+here the return value type of i is string
+b=['s','i','r','e','e','s','h','a']
+for i in b:
+    print(i)
+output s
+i
+r
+e
+e
+s
+h
+a
+here the return value type is also string, inthis context we can say strings and lists are identical. if the list has data type other than string then it will return the same type value but not string.It is not possible with strings.
+
+13.Whats the difference between tuples and lists?
+ANS The key difference between the tuples and lists is that while the tuples are immutable objects the lists are mutable. This means that tuples cannot be changed while the lists can be modified.
+Tuples are more memory efficient than the lists.
+When it comes to the time efficiency, again tuples have a slight advantage over the lists especially when lookup to a value is considered.
+If you have data which is not meant to be changed in the first place, you should choose tuple data type over lists.
+
+
+14.How do you type a tuple value that only contains the integer 42?
+ANS:t=(42,), this will return type of value is tuple. without , it just returns int value.
+
+15.How do you get a list value's tuple form? How do you get a tuple value's list form?
+ANS: By using Zip() method, we can create a list of tuples from n lists.
+r=[1,2,3,4,5]
+n=['a','b','c','d','e']
+data = list(zip(r,n))
+data
+
+output:[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]
+
+By simply using tuple() method and list() method we can change values from list to tuple and viceversa.
+
+
+16.Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+ANS They contain iterable objects.
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+ANS copy.copy() creates a copy of the original if any changes in the original will reflect in the copy also
+copy .deepcopy() creates a true copy of the original and it wont be reflect any changes in original once it formed.
+
+
+
+
+
